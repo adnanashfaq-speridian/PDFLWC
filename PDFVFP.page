@@ -1,0 +1,9 @@
+<apex:page>
+    <apex:form>
+        <apex:outputText value="From Date: {!$CurrentPage.parameters.fromDate}" />
+        <br/>
+        <apex:outputText value="To Date: {!$CurrentPage.parameters.toDate}" />
+        <br/>
+        <!-- Add more logic here if needed -->
+    </apex:form>
+</apex:page>
