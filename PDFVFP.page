@@ -1,9 +1,14 @@
-<apex:page>
-    <apex:form>
+<apex:page controller="PDFVfpController">
+    <apex:form >
         <apex:outputText value="From Date: {!$CurrentPage.parameters.fromDate}" />
         <br/>
         <apex:outputText value="To Date: {!$CurrentPage.parameters.toDate}" />
-        <br/>
-        <!-- Add more logic here if needed -->
     </apex:form>
+    
+     <apex:pageBlock title="Fetched Records" id="recordsTable">
+            <apex:pageBlockTable value="{!contactRecords}" var="record">
+                <apex:column value="{!record.Name}" headerValue="Name"/>
+                <apex:column value="{!record.CreatedDate}" headerValue="Created Date"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
 </apex:page>
